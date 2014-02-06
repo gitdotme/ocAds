@@ -1,0 +1,20 @@
+# Packages #
+*.rar
+*.zip
+*.tar
+*.tar.gz
+*.gz
+
+# Logs #
+*.log
+error_log
+
+# OS generated files #
+Thumbs.db
+
+/*.html
+/*.php
+!/index.php
+/app/logs/*.php
+/nbproject/
+/work/

@@ -1,0 +1,267 @@
+DROP TABLE IF EXISTS `atv`;
+CREATE TABLE IF NOT EXISTS `atv` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `title` (`title`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=28 ;
+
+INSERT INTO `atv` (`id`, `title`) VALUES
+(1, 'arctic cat'),
+(2, 'attiude eclipse toyhauler'),
+(3, 'baja cammo'),
+(4, 'big dog'),
+(5, 'bmw'),
+(6, 'buell'),
+(7, 'coolster'),
+(8, 'coolster or taotao'),
+(9, 'daves'),
+(10, 'ducati'),
+(11, 'eddie trotta'),
+(12, 'harley-davidson'),
+(13, 'haulmark'),
+(14, 'honda'),
+(15, 'kandi'),
+(16, 'kawasaki'),
+(17, 'kawaskai'),
+(18, 'killer'),
+(19, 'massimo'),
+(20, 'motorcycle parts'),
+(21, 'mv agusta'),
+(22, 'polaris'),
+(23, 'quality trailers inc'),
+(24, 'shasta'),
+(25, 'Suzuki'),
+(26, 'taotao'),
+(27, 'yamaha');
+
+DROP TABLE IF EXISTS `boat`;
+CREATE TABLE IF NOT EXISTS `boat` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `title` (`title`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=36 ;
+
+INSERT INTO `boat` (`id`, `title`) VALUES
+(1, 'Bavaria'),
+(2, 'Bayliner'),
+(3, 'Beneteau'),
+(4, 'Boston Whaler'),
+(5, 'Broom'),
+(6, 'Carver'),
+(7, 'Catalina'),
+(8, 'Chaparral'),
+(9, 'Chris Craft'),
+(10, 'Cobalt'),
+(11, 'Colvic'),
+(12, 'Contender'),
+(13, 'Dufour'),
+(14, 'Fairline'),
+(15, 'Formula'),
+(16, 'Four Winns'),
+(17, 'Hatteras'),
+(18, 'Hunter Marine'),
+(19, 'Jeanneau'),
+(20, 'Larson'),
+(21, 'Liverpool Boats'),
+(22, 'Malibu'),
+(23, 'Maxum'),
+(24, 'Monterey'),
+(25, 'Moody'),
+(26, 'Premier'),
+(27, 'Princess'),
+(28, 'Regal'),
+(29, 'Rinker'),
+(30, 'Sea Ray'),
+(31, 'Sealine'),
+(32, 'Silverton'),
+(33, 'Wellcraft'),
+(34, 'Westerly'),
+(35, 'Yamaha');
+
+DROP TABLE IF EXISTS `car`;
+CREATE TABLE IF NOT EXISTS `car` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `title` (`title`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=36 ;
+
+INSERT INTO `car` (`id`, `title`) VALUES
+(1, 'Acura'),
+(2, 'Audi'),
+(3, 'BMW'),
+(4, 'Cadillac'),
+(5, 'Chevrolet'),
+(6, 'Chrysler'),
+(7, 'Citroen'),
+(8, 'Dodge'),
+(9, 'Fiat'),
+(10, 'Ford'),
+(11, 'GMC'),
+(12, 'Honda'),
+(13, 'Hyundai'),
+(14, 'Jeep'),
+(15, 'Kia'),
+(16, 'Land Rover'),
+(17, 'Lexus'),
+(18, 'Mazda'),
+(19, 'Mercedes-Benz'),
+(20, 'Mini'),
+(21, 'Mitsubishi'),
+(22, 'Nissan'),
+(23, 'Opel'),
+(24, 'Peugeot'),
+(25, 'Pontiac'),
+(26, 'Renault'),
+(27, 'Rover'),
+(28, 'Seat'),
+(29, 'Skoda'),
+(30, 'Subaru'),
+(31, 'Suzuki'),
+(32, 'Toyota'),
+(33, 'Vauxhall'),
+(34, 'Volkswagen'),
+(35, 'Volvo');
+
+DROP TABLE IF EXISTS `moto`;
+CREATE TABLE IF NOT EXISTS `moto` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `title` (`title`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=38 ;
+
+INSERT INTO `moto` (`id`, `title`) VALUES
+(1, 'Adly'),
+(2, 'Aprilia'),
+(3, 'Arctic Cat'),
+(4, 'Bajaj'),
+(5, 'Big Dog'),
+(6, 'BMW'),
+(7, 'Buell'),
+(8, 'Can-Am'),
+(9, 'Ducati'),
+(10, 'Genuine'),
+(11, 'Harley-Davidson'),
+(12, 'Honda'),
+(13, 'Husqvarna'),
+(14, 'Hyosung'),
+(15, 'Indian'),
+(16, 'Kawasaki'),
+(17, 'Keeway'),
+(18, 'KTM'),
+(19, 'Kymco'),
+(20, 'Lifan'),
+(21, 'Moto Guzzi'),
+(22, 'MV Agusta'),
+(23, 'Outro'),
+(24, 'Piaggio'),
+(25, 'Polaris'),
+(26, 'Polini'),
+(27, 'Royal Enfield'),
+(28, 'Sps'),
+(29, 'Suzuki'),
+(30, 'Sym'),
+(31, 'Triton'),
+(32, 'Triumph'),
+(33, 'TVS Motor'),
+(34, 'Ural'),
+(35, 'Vespa'),
+(36, 'Victory'),
+(37, 'Yamaha');
+
+DROP TABLE IF EXISTS `rv`;
+CREATE TABLE IF NOT EXISTS `rv` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `title` (`title`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=35 ;
+
+INSERT INTO `rv` (`id`, `title`) VALUES
+(1, 'Airstream'),
+(2, 'Aliner'),
+(3, 'Beaver'),
+(4, 'Carriage'),
+(5, 'Chateau'),
+(6, 'Coach House'),
+(7, 'Coachmen'),
+(8, 'Country Coach'),
+(9, 'Damon'),
+(10, 'Fleetwood'),
+(11, 'Ford'),
+(12, 'Four Winds'),
+(13, 'Georgie Boy'),
+(14, 'Gulf Stream'),
+(15, 'Holiday Rambler'),
+(16, 'Jayco'),
+(17, 'Keystone'),
+(18, 'Lance'),
+(19, 'Monaco'),
+(20, 'National RV'),
+(21, 'Newmar'),
+(22, 'Nuwa'),
+(23, 'Outro'),
+(24, 'Roadtrek'),
+(25, 'Rockwood'),
+(26, 'Safari'),
+(27, 'Shasta'),
+(28, 'Skyline'),
+(29, 'Starcraft'),
+(30, 'Sunnybrook'),
+(31, 'Thor'),
+(32, 'Trail-Lite'),
+(33, 'Weekend Warrior'),
+(34, 'Winnebago');
+
+DROP TABLE IF EXISTS `tag`;
+CREATE TABLE IF NOT EXISTS `tag` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tag` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `tag` (`tag`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+DROP TABLE IF EXISTS `trailer`;
+CREATE TABLE IF NOT EXISTS `trailer` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `title` (`title`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=33 ;
+
+INSERT INTO `trailer` (`id`, `title`) VALUES
+(1, 'AllPro'),
+(2, 'Aluma'),
+(3, 'Becker'),
+(4, 'Bendron Titan'),
+(5, 'BIG TEX'),
+(6, 'Cargo Craft'),
+(7, 'Carry On'),
+(8, 'CM'),
+(9, 'CTS'),
+(10, 'Diamond Cargo'),
+(11, 'EAGLE'),
+(12, 'Freedom'),
+(13, 'GatorTail FACTORY DIRECT'),
+(14, 'H&H'),
+(15, 'haulmark'),
+(16, 'kingdom'),
+(17, 'Lark'),
+(18, 'Legend'),
+(19, 'Liberty'),
+(20, 'LKN'),
+(21, 'Load Trail'),
+(22, 'LOOK'),
+(23, 'MARLIN CARGO'),
+(24, 'MARLIN CARGO Classic'),
+(25, 'Octane Trailers'),
+(26, 'Pace American'),
+(27, 'SDG'),
+(28, 'South Ga Cargo'),
+(29, 'STARLINE CARGO'),
+(30, 'Thunder'),
+(31, 'United'),
+(32, 'Wells Cargo');

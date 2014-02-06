@@ -1,0 +1,251 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body 
+{
+	font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+	font-size: 14px;
+	color: #333333;
+}
+
+a
+{
+    color: #11548C;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+.clear
+{
+    display: block;
+    clear: both;
+}
+
+.centered
+{
+    text-align: center;
+}
+
+/**
+ * Wrapper Layer
+*/
+#wrap
+{
+    width: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#header
+{
+    margin: 20px 0;
+    text-align: center;
+}
+
+#steps
+{
+    margin: 20px 0;
+    text-align: center;
+}
+
+#steps h1
+{
+    margin-bottom: 12px;
+    font-size: 22px;
+    font-family: Georgia;
+    color: #4679BD;
+}
+
+#steps ul
+{
+    width: 325px;
+    margin: 0 auto;
+    list-style: none;
+    overflow: hidden;
+    clear: both;
+}
+
+#steps ul li
+{
+    float: left;
+    width: 45px;
+    margin: 0 10px;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+#steps ul li .circleText
+{
+    width:100%;
+}
+
+#steps ul li .circleText:after
+{
+    content: "";
+    display: block;
+    width: 100%;
+    height:0;
+    padding-bottom: 100%;
+    background: #EBEBEB;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#steps ul li .circleText div
+{
+    float:left;
+    width:100%;
+    padding-top:50%;
+    line-height:1em;
+    margin-top:-0.5em;
+    text-align:center;
+    color:#999999;
+}
+
+#steps ul li .circleText.active
+{
+    width:100%;
+}
+
+#steps ul li .circleText.active:after
+{
+    content: "";
+    display: block;
+    width: 100%;
+    height:0;
+    padding-bottom: 100%;
+    background: #4679BD;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#steps ul li .circleText.active div
+{
+    float:left;
+    width:100%;
+    padding-top:50%;
+    line-height:1em;
+    margin-top:-0.5em;
+    text-align:center;
+    color:white;
+}
+
+#content
+{
+    margin: 30px 0;
+    padding: 10px 20px;
+    background: #FBFBFB;
+    border: 1px solid #E2E2E2;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#content h2
+{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333333;
+}
+
+#content p
+{
+    line-height: 20px;
+}
+
+#content .info
+{
+    margin-bottom: 15px;
+}
+
+#content .error
+{
+    margin-bottom: 10px;
+    padding: 6px 12px;
+    background: #FDECEE;
+    border: 1px solid #F58798;
+    font-size: 13px;
+    line-height: 22px;
+}
+
+#content .formPart
+{
+    margin: 10px 0;
+}
+
+#content .formPart .requirement
+{
+    font-family: "Courier New";
+    overflow: hidden;
+}
+
+#content .formPart .requirement span
+{
+    float: right;
+}
+
+#content .formPart .passed
+{
+    color: #005500;
+}
+
+#content .formPart .failed
+{
+    color: #A60000;
+}
+
+#content .formPart label
+{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#content .formPart .inputMedium
+{
+    width: 160px;
+    padding: 4px 6px;
+    border: 1px solid #CCCCCC;
+}
+
+#content .formPart .inputLarge
+{
+    width: 300px;
+    padding: 4px 6px;
+    border: 1px solid #CCCCCC;
+}
+
+#content .formPart .inputSubmit
+{
+    margin-top: 5px;
+    background: -moz-linear-gradient(center top , #007EC2, #134676) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #3079ED;
+    border-radius: 2px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.4em 10px;
+    text-align: center;
+}
+
+#content .formPart .inputSubmit:hover
+{
+    background: -moz-linear-gradient(center top , #4D90FE, #134676) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #2F5BB7;
+}
+
+#content .formPart .inputSubmit:active
+{
+    background: -moz-linear-gradient(center top , #007EC2, #134676) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #3079ED;
+}
