@@ -47,8 +47,6 @@ if ( !function_exists('mailSend'))
            return TRUE;
         }
         
-        echo $mail->ErrorInfo;
-        
         return FALSE;
     }
 }
