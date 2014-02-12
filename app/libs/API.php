@@ -70,11 +70,6 @@ class API
         self::$_apiKey = Config::get('apiKey');
     }
     
-    public static function debug()
-    {
-        echo self::$_resultsLimit;
-    }
-    
     /**
      * 
      * @static
