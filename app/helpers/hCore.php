@@ -181,7 +181,15 @@ if ( ! function_exists('baseURL'))
         
         if ($url !== NULL)
         {
-            return Config::get('baseURL').'/'.ltrim($url);
+            $baseURL = Config::get('baseURL');
+            if ($baseURL)
+            {
+                return rtrim(Config::get('baseURL'), '/').'/'.ltrim($url, '/');
+            }
+            else
+            {
+                return ltrim($url);
+            }
         }
         else
         {

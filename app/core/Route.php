@@ -43,7 +43,7 @@ class Route
      */
     public function __construct()
     {
-        self::$_request = ltrim(rtrim($_SERVER['REQUEST_URI'], '/'), '/');
+        self::$_request = self::_getRequest();
         
         require APP_DIR.'/config/route.php';
         
@@ -62,6 +62,25 @@ class Route
         {
             self::_parseRequest();
         }
+    }
+    
+    /**
+     * 
+     * @access private
+     * @static
+     * @return string
+     */
+    private static function _getRequest()
+    {
+        if ( ! Config::get('baseURL'))
+        {
+            showError('The baseURL is not defined on config file.', 'baseURL Not Defined', 500);
+        }
+        
+        $url_path = parse_url(baseURL(), PHP_URL_PATH);
+        $request = ltrim(rtrim(str_replace($url_path, '', $_SERVER['REQUEST_URI']), '/'), '/');
+        
+        return $request;
     }
     
     /**
