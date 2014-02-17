@@ -241,7 +241,7 @@ switch ($step)
                             
                             if ($put !== FALSE)
                             {
-                                //$success = TRUE;
+                                $success = TRUE;
                             }
                             else
                             {
