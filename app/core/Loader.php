@@ -21,7 +21,7 @@ class Loader
                 {
                     foreach ($value as $name)
                     {
-                        self::{$key}($name);
+                        call_user_func(array($this, $key), $name);
                     }
                 }
             }
