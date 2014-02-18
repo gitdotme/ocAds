@@ -94,7 +94,7 @@
                     <?php if ($carMakes): ?>
                     <!-- car makes begin //-->
                     <div class="homeLatest">
-                        <h2>Cars Makes</h2>
+                        <h2>Car Makes</h2>
                         <ul>
                             <?php if ($carMakes): ?>
                                 <?php foreach ($carMakes as $carMake): ?>
@@ -108,7 +108,7 @@
                     <?php if ($boatMakes): ?>
                     <!-- boat makes begin //-->
                     <div class="homeLatest">
-                        <h2>Boats Makes</h2>
+                        <h2>Boat and Yatch Makes</h2>
                         <ul>
                             <?php if ($boatMakes): ?>
                                 <?php foreach ($boatMakes as $boatMake): ?>
@@ -122,7 +122,7 @@
                     <?php if ($motoMakes): ?>
                     <!-- moto makes begin //-->
                     <div class="homeLatest">
-                        <h2>Motorcycles Makes</h2>
+                        <h2>Motorcycle Makes</h2>
                         <ul>
                             <?php if ($motoMakes): ?>
                                 <?php foreach ($motoMakes as $motoMake): ?>
@@ -136,7 +136,7 @@
                     <?php if ($atvMakes): ?>
                     <!-- atv makes begin //-->
                     <div class="homeLatest">
-                        <h2>ATVs Makes</h2>
+                        <h2>ATV Makes</h2>
                         <ul>
                             <?php if ($atvMakes): ?>
                                 <?php foreach ($atvMakes as $atvMake): ?>
@@ -150,7 +150,7 @@
                     <?php if ($rvMakes): ?>
                     <!-- rv makes begin //-->
                     <div class="homeLatest">
-                        <h2>RVs Makes</h2>
+                        <h2>RV Makes</h2>
                         <ul>
                             <?php if ($rvMakes): ?>
                                 <?php foreach ($rvMakes as $rvMake): ?>
@@ -164,7 +164,7 @@
                     <?php if ($trailerMakes): ?>
                     <!-- trailer makes begin //-->
                     <div class="homeLatest">
-                        <h2>Trailers Makes</h2>
+                        <h2>Trailer Makes</h2>
                         <ul>
                             <?php if ($trailerMakes): ?>
                                 <?php foreach ($trailerMakes as $trailerMake): ?>
