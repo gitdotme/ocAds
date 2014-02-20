@@ -9,7 +9,7 @@
  * 
  * All => "" (empty or null)
  * Cars => "car"
- * Boat and Yatchs => "boat"
+ * Boat and Yachts => "boat"
  * Motorcycles => "moto"
  * ATVs => "atv"
  * RVs => "rv"

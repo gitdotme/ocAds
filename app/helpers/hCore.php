@@ -299,7 +299,7 @@ if ( ! function_exists('getType'))
         {
             $list = array(
                 'car' => 'Cars',
-                'boat' => 'Boats and Yatchs',
+                'boat' => 'Boats and Yachts',
                 'moto' => 'Bikes',
                 'atv' => 'ATVs',
                 'rv' => 'RVs',

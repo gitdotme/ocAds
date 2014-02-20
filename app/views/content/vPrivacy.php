@@ -20,7 +20,7 @@
                                 <p>
                                     <select name="type" class="searchType">
                                         <option value="car">Cars</option>
-                                        <option value="boat">Boat and Yatchs</option>
+                                        <option value="boat">Boat and Yachts</option>
                                         <option value="moto">Motorcycles</option>
                                         <option value="atv">ATVs</option>
                                         <option value="rv">RVs</option>

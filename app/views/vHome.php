@@ -33,7 +33,7 @@
                                         <option value="trailer"<?php echo selectedVal('trailer', $params['type']); ?>>Trailers</option>
                                         <?php else: ?>
                                         <option value="car">Cars</option>
-                                        <option value="boat">Boat and Yatchs</option>
+                                        <option value="boat">Boat and Yachts</option>
                                         <option value="moto">Motorcycles</option>
                                         <option value="atv">ATVs</option>
                                         <option value="rv">RVs</option>
@@ -108,7 +108,7 @@
                     <?php if ($boatMakes): ?>
                     <!-- boat makes begin //-->
                     <div class="homeLatest">
-                        <h2>Boat and Yatch Makes</h2>
+                        <h2>Boat and Yacht Makes</h2>
                         <ul>
                             <?php if ($boatMakes): ?>
                                 <?php foreach ($boatMakes as $boatMake): ?>
