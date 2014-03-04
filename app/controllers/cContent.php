@@ -21,9 +21,11 @@ class cContent extends Controller
      */
     public function about()
     {
+        $data['sidebarLayout'] = View::render('content/vSidebar', array('page' => 'about'), TRUE);
+        
         Layout::title('About Us');
         Layout::desc('About Us');
-        Layout::view('content/vAbout');
+        Layout::view('content/vAbout', $data);
     }
     
     /**
@@ -32,9 +34,11 @@ class cContent extends Controller
      */
     public function privacy()
     {
+        $data['sidebarLayout'] = View::render('content/vSidebar', array('page' => 'privacy'), TRUE);
+        
         Layout::title('Privacy Policy');
         Layout::desc('Privacy Policy');
-        Layout::view('content/vPrivacy');
+        Layout::view('content/vPrivacy', $data);
     }
     
     /**
@@ -43,9 +47,11 @@ class cContent extends Controller
      */
     public function terms()
     {
+        $data['sidebarLayout'] = View::render('content/vSidebar', array('page' => 'terms'), TRUE);
+        
         Layout::title('Terms of Use');
         Layout::desc('Terms of Use');
-        Layout::view('content/vTerms');
+        Layout::view('content/vTerms', $data);
     }
     
     /**
@@ -85,6 +91,8 @@ class cContent extends Controller
                 );
             }
         }
+        
+        $data['sidebarLayout'] = View::render('content/vSidebar', array('page' => 'contact'), TRUE);
         
         Layout::title('Contact');
         Layout::desc('Contact us.');

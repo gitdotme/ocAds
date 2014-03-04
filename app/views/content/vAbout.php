@@ -71,14 +71,7 @@
             <section id="content">
                 <div class="static">
                     <h1>About Us</h1>
-                    <div class="staticNav">
-                        <ul>
-                            <li><a href="<?php echo baseURL('about_us'); ?>" class="on">About Us</a></li>
-                            <li><a href="<?php echo baseURL('privacy_policy'); ?>">Privacy Policy</a></li>
-                            <li><a href="<?php echo baseURL('terms_of_use'); ?>">Terms of Use</a></li>
-                            <li><a href="<?php echo baseURL('contact'); ?>">Contact</a></li>
-                        </ul>
-                    </div>
+                    <?php echo $sidebarLayout; ?>
                     <div class="staticContent">
                         <h2>What is <?php echo Config::get('siteName', 'seo'); ?>?</h2>
                         

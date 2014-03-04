@@ -56,14 +56,7 @@
             <section id="content">
                 <div class="static">
                     <h1>Terms of Use</h1>
-                    <div class="staticNav">
-                        <ul>
-                            <li><a href="<?php echo baseURL('about_us'); ?>">About Us</a></li>
-                            <li><a href="<?php echo baseURL('privacy_policy'); ?>">Privacy Policy</a></li>
-                            <li><a href="<?php echo baseURL('terms_of_use'); ?>" class="on">Terms of Use</a></li>
-                            <li><a href="<?php echo baseURL('contact'); ?>">Contact</a></li>
-                        </ul>
-                    </div>
+                    <?php echo $sidebarLayout; ?>
                     <div class="staticContent">
                         <h2>PLEASE READ THESE TERMS OF USE CAREFULLY, AS THEY CONTAIN IMPORTANT INFORMATION REGARDING YOUR LEGAL RIGHTS AND REMEDIES.</h2>
                         

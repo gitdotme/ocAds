@@ -56,14 +56,7 @@
             <section id="content">
                 <div class="static">
                     <h1>Contact</h1>
-                    <div class="staticNav">
-                        <ul>
-                            <li><a href="<?php echo baseURL('about_us'); ?>">About Us</a></li>
-                            <li><a href="<?php echo baseURL('privacy_policy'); ?>">Privacy Policy</a></li>
-                            <li><a href="<?php echo baseURL('terms_of_use'); ?>">Terms of Use</a></li>
-                            <li><a href="<?php echo baseURL('contact'); ?>" class="on">Contact</a></li>
-                        </ul>
-                    </div>
+                    <?php echo $sidebarLayout; ?>
                     <div class="staticContent">
                         <div class="contact">
                             <?php if (isset($success) AND $success === TRUE): ?>
