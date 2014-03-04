@@ -5,11 +5,6 @@
                     <p><a href="<?php echo baseURL(); ?>" title="<?php echo Config::get('siteName', 'seo'); ?>"><img src="<?php echo baseURL('assets/img/logo-large.gif'); ?>" alt="<?php echo Config::get('siteName', 'seo'); ?>"></a></p>
                 </div>
                 <!-- header logo end //-->
-                <!-- header text start //-->
-                <div class="headerText">
-                    <h1><?php echo $headingLayout; ?></h1>
-                </div>
-                <!-- header text end //-->
                 <!-- header bar begin //-->
                 <div class="headerBar">
                     <!-- search form begin //-->
@@ -71,6 +66,11 @@
                 </div>
                 <div class="clear">&nbsp;</div>
                 <!-- header bar end //-->
+                <!-- header text start //-->
+                <div class="headerText">
+                    <h1><?php echo $headingLayout; ?></h1>
+                </div>
+                <!-- header text end //-->
             </header>
             <!-- home header layer end //-->
             <!-- content layer start //-->
