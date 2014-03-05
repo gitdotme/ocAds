@@ -130,8 +130,9 @@ $(document).ready(function(e)
     
     if ($('#fOrder').length)
     {
-        $('#fOrder').change(function() {
-            document.location = $('#fOrder').val();
+        $('#fOrder').change(function()
+        {
+            document.location = $('#fOrder').attr('data-route') + '?' + $('#fOrder').val();
         });
     }
     

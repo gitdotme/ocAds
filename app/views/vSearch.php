@@ -217,12 +217,12 @@
                     <div class="searchOrder">
                         <form method="get" action="#">
                             <label for="fOrder">Order by:</label>
-                            <select name="order" id="fOrder">
-                                <option value="<?php echo searchLink($params, TRUE, array('order' => 1)); ?>"<?php echo selectedVal('1', $params['order']); ?>>Date (recent)</option>
-                                <option value="<?php echo searchLink($params, TRUE, array('order' => 2)); ?>"<?php echo selectedVal('2', $params['order']); ?>>Date (oldest)</option>
-                                <option value="<?php echo searchLink($params, TRUE, array('order' => 3)); ?>"<?php echo selectedVal('3', $params['order']); ?>>Price (lowest)</option>
-                                <option value="<?php echo searchLink($params, TRUE, array('order' => 4)); ?>"<?php echo selectedVal('4', $params['order']); ?>>Price (highest)</option>
-                                <option value="<?php echo searchLink($params, TRUE, array('order' => 5)); ?>"<?php echo selectedVal('5', $params['order']); ?>>Relevance</option>
+                            <select name="order" id="fOrder" data-route="<?php echo Config::get('searchLink', 'seo'); ?>">
+                                <option value="<?php echo makeParams($params, TRUE, array('order' => 1)); ?>"<?php echo selectedVal('1', $params['order']); ?>>Date (recent)</option>
+                                <option value="<?php echo makeParams($params, TRUE, array('order' => 2)); ?>"<?php echo selectedVal('2', $params['order']); ?>>Date (oldest)</option>
+                                <option value="<?php echo makeParams($params, TRUE, array('order' => 3)); ?>"<?php echo selectedVal('3', $params['order']); ?>>Price (lowest)</option>
+                                <option value="<?php echo makeParams($params, TRUE, array('order' => 4)); ?>"<?php echo selectedVal('4', $params['order']); ?>>Price (highest)</option>
+                                <option value="<?php echo makeParams($params, TRUE, array('order' => 5)); ?>"<?php echo selectedVal('5', $params['order']); ?>>Relevance</option>
                             </select>
                         </form>
                     </div>
