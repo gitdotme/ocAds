@@ -47,18 +47,3 @@ $config['tagsDesc'] = 'Classified ads for [{tag}][ - {page}]. [{total}] results 
 
 // tags heading
 $config['tagsHeading'] = '[{tag} classifieds] - [{total}] results found';
-
-/**
- * Links
- */
-// tag link
-$config['itemLink'] = 'rd/{hash}';
-
-// search link
-$config['searchLink'] = 'search';
-
-// tag link
-$config['tagLink'] = 'tag/{tag}';
-
-// rss link
-$config['rssLink'] = 'rss';

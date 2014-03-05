@@ -8,7 +8,7 @@
                 <!-- header bar begin //-->
                 <div class="headerBar">
                     <!-- search form begin //-->
-                    <form method="get" action="<?php echo baseURL(Config::get('searchLink', 'seo')); ?>" class="searchForm">
+                    <form method="get" action="<?php echo baseURL(Route::get_config('searchLink', 'route')); ?>" class="searchForm">
                         <ul>
                             <li>
                                 <p><span>What?</span></p>

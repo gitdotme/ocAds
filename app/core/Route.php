@@ -38,6 +38,14 @@ class Route
     private static $_args = array();
     
     /**
+     *
+     * @access private
+     * @static
+     * @var array
+     */
+    private static $_config = array();
+    
+    /**
      * 
      * @return void
      */
@@ -51,9 +59,10 @@ class Route
         {
             foreach ($route as $key => $value)
             {
-                if ( ! self::$_controller)
+                if ( ! self::$_controller AND (isset($value['route']) AND isset($value['method'])))
                 {
-                    self::_check($key, $value);
+                    self::_check($value['route'], $value['method']);
+                    self::_set_config($key, $value['route'], $value['method']);
                 }
             }
         }
@@ -191,5 +200,35 @@ class Route
                 return self::$_args;
                 break;
         }
+    }
+    
+    /**
+     * 
+     * @param string $item
+     * @param string $route
+     * @param string $method
+     */
+    private static function _set_config($item, $route, $method)
+    {
+        self::$_config[$item] = array(
+            'route' => $route,
+            'method' => $method
+        );
+    }
+    
+    /**
+     * 
+     * @param string $item
+     * @param string $type
+     * @return string|null
+     */
+    public static function get_config($item, $type)
+    {
+        if (isset(self::$_config[$item][$type]))
+        {
+            return self::$_config[$item][$type];
+        }
+        
+        return NULL;
     }
 }

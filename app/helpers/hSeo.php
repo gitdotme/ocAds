@@ -56,13 +56,12 @@ if ( ! function_exists('itemLink'))
 {
     /**
     * 
-    * @param string $make
-    * @param string $model Default is NULL
+    * @param string $id
     * @return string
     */
-    function itemLink($hash)
+    function itemLink($id)
     {
-        return baseUrl(str_replace('{hash}', seoLinks($hash), Config::get('itemLink', 'seo')));
+        return baseUrl(str_replace('{id}', seoLinks($id), Route::get_config('itemLink', 'route')));
     }
 }
 
@@ -135,7 +134,7 @@ if ( ! function_exists('searchLink'))
 
         $str = makeParams($params, $page, $extend);
 
-        return baseURL(Config::get($link, 'seo').($str ? '?'.$str : ''));
+        return baseURL(Config::get($link, 'route').($str ? '?'.$str : ''));
     }
 }
 
@@ -148,7 +147,7 @@ if ( ! function_exists('tagLink'))
     */
     function tagLink($str)
     {
-        return baseUrl(str_replace('{tag}', seoLinks($str, TRUE), Config::get('tagLink', 'seo')));
+        return baseUrl(str_replace('{tag}', seoLinks($str, TRUE), Route::get_config('tagLink', 'route')));
     }
 }
 

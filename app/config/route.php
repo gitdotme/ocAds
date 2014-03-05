@@ -1,23 +1,57 @@
 <?php if ( ! defined('APP_DIR')) exit('Your request not allowed!');
 
 // item
-$route['rd/{id}'] = 'item@index';
+$route['itemLink'] = array(
+    'route' => 'rd/{id}',
+    'method' => 'item@index'
+);
 
 // search
-$route['search'] = 'search@index';
+$route['searchLink'] = array(
+    'route' => 'search',
+    'method' => 'search@index'
+);
 
 // rss
-$route['rss'] = 'search@rss';
+$route['rssLink'] = array(
+    'route' => 'rss',
+    'method' => 'search@rss'
+);
 
 // tags
-$route['tag/{tag}'] = 'search@index';
-$route['tag/{tag}/{page}'] = 'search@index';
+$route['tagLink'] = array(
+    'route' => 'tag/{tag}',
+    'method' => 'search@index'
+);
+
+$route['tagPageLink'] = array(
+    'route' => 'tag/{tag}/{page}',
+    'method' => 'search@index'
+);
 
 // static content
-$route['about_us'] = 'content@about';
-$route['privacy_policy'] = 'content@privacy';
-$route['terms_of_use'] = 'content@terms';
-$route['contact'] = 'content@contact';
+$route['aboutUsLink'] = array(
+    'route' => 'about_us',
+    'method' => 'content@about'
+);
+
+$route['privacyLink'] = array(
+    'route' => 'privacy_policy',
+    'method' => 'content@privacy'
+);
+
+$route['termsLink'] = array(
+    'route' => 'terms_of_use',
+    'method' => 'content@terms'
+);
+
+$route['contactLink'] = array(
+    'route' => 'contact',
+    'method' => 'content@contact'
+);
 
 // captcha
-$route['captcha'] = 'captcha@index';
+$route['captchaLink'] = array(
+    'route' => 'captcha',
+    'method' => 'captcha@index'
+);

@@ -8,7 +8,7 @@
                 <!-- header bar begin //-->
                 <div class="headerBar">
                     <!-- search form begin //-->
-                    <form method="get" action="<?php echo baseURL(Config::get('searchLink', 'seo')); ?>" class="searchForm">
+                    <form method="get" action="<?php echo baseURL(Route::get_config('searchLink', 'route')); ?>" class="searchForm">
                         <ul>
                             <li>
                                 <p><input type="text" name="query" class="searchQuery" placeholder="Search for..."></p>
@@ -76,7 +76,7 @@
                 <!-- search filter begin //-->
                 <aside id="searchFilter">
                     <h2>Filter your search</h2>
-                    <form id="filterForm" method="get" action="<?php echo baseURL(Config::get('searchLink', 'seo')); ?>">
+                    <form id="filterForm" method="get" action="<?php echo baseURL(Route::get_config('searchLink', 'route')); ?>">
                         <?php if ( ! Config::get('searchKeyword', 'search')): ?>
                         <div class="filterPart">
                             <label for="fQuery">Search for</label>
@@ -217,7 +217,7 @@
                     <div class="searchOrder">
                         <form method="get" action="#">
                             <label for="fOrder">Order by:</label>
-                            <select name="order" id="fOrder" data-route="<?php echo Config::get('searchLink', 'seo'); ?>">
+                            <select name="order" id="fOrder" data-route="<?php echo Route::get_config('searchLink', 'route'); ?>">
                                 <option value="<?php echo makeParams($params, TRUE, array('order' => 1)); ?>"<?php echo selectedVal('1', $params['order']); ?>>Date (recent)</option>
                                 <option value="<?php echo makeParams($params, TRUE, array('order' => 2)); ?>"<?php echo selectedVal('2', $params['order']); ?>>Date (oldest)</option>
                                 <option value="<?php echo makeParams($params, TRUE, array('order' => 3)); ?>"<?php echo selectedVal('3', $params['order']); ?>>Price (lowest)</option>

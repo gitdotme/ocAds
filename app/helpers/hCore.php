@@ -198,6 +198,26 @@ if ( ! function_exists('baseURL'))
     }
 }
 
+if ( ! function_exists('getRoute'))
+{
+    /**
+     * 
+     * @param string $index
+     * @return string|null
+     */
+    function getRoute($index)
+    {
+        $route = Config::get($index, 'route');
+        
+        if (isset($route['route']))
+        {
+            return $route['route'];
+        }
+        
+        return NULL;
+    }
+}
+
 if ( ! function_exists('filterText'))
 {
     /**
