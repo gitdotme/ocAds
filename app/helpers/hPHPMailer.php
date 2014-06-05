@@ -24,6 +24,12 @@ if ( !function_exists('mailSend'))
         $mail->FromName = $from['name'];
         $mail->addAddress($to);
         
+        $addresses = explode(',', $to);
+        foreach ($addresses as $address)
+        {
+            $mail->addAddress($address);
+        }
+        
         if ($replyTo)
         {
             $mail->addReplyTo($replyTo['email'], $replyTo['name']);
