@@ -16,5 +16,3 @@ Thumbs.db
 /*.php
 !/index.php
 /app/logs/*.php
-/nbproject/
-/work/
