@@ -15,6 +15,9 @@ $config['maxCharLimit'] = 100;
 // save tags min results limit
 $config['minResultsLimit'] = 1;
 
+// random range size of tags
+$config['tagsRangeSize'] = 1000;
+
 /**
  * Home Page
  */

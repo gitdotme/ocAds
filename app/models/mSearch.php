@@ -66,9 +66,9 @@ class mSearch extends Model
             'total' => $total
         );
     }
-    
+
     /**
-     * 
+     *
      * @param string $order
      * @param int $limit Default is 10
      * @return object|null
@@ -79,29 +79,71 @@ class mSearch extends Model
         {
             return NULL;
         }
-        
-        DB::select('tag');
-        DB::from('tag');
-        
+
         if ($order == 'latest')
         {
+            DB::select('tag');
+            DB::from('tag');
             DB::orderBy('id', 'desc');
         }
         else if ($order == 'random')
         {
+            $range = $this->_tagsRandomRange();
+
+            DB::select('tag');
+            DB::from('tag');
+            DB::whereGreaterEqual('id', $range['start']);
+            DB::whereLessEqual('id', $range['end']);
             DB::orderBy('id', 'rand');
         }
-        
-        $config_limit = Config::get('home'.ucfirst($order).'Limit', 'tags');
-        if ($config_limit)
+
+        $configLimit = Config::get('home'.ucfirst($order).'Limit', 'tags');
+        if ($configLimit)
         {
-            $limit = $config_limit;
+            $limit = $configLimit;
         }
-        
+
         DB::limit($limit);
         DB::run();
-        
+
         return DB::getResults();
+    }
+
+    /**
+     *
+     * @return array
+     */
+    private function _tagsRandomRange()
+    {
+        DB::select('id');
+        DB::from('tag');
+        DB::run();
+
+        $tagsCount = DB::numRows();
+
+        $rangeSize = Config::get('tagsRangeSize', 'tags');
+
+        if ($rangeSize >= $tagsCount)
+        {
+            return array(
+                'start' => 1,
+                'end' => $tagsCount
+            );
+        }
+
+        $rangeStart = rand(1, $tagsCount);
+
+        if (($rangeStart + $rangeSize) > $tagsCount)
+        {
+            $rangeStart -= ($rangeStart + $rangeSize) - $tagsCount;
+        }
+
+        $rangeEnd = $rangeStart+$rangeSize;
+
+        return array(
+            'start' => $rangeStart,
+            'end' => $rangeEnd
+        );
     }
     
     /**
@@ -186,12 +228,16 @@ class mSearch extends Model
                     'total' => ($total > 0) ? formatNumber($total) : 0
                 );
                 break;
-        }       
+            
+            default:
+                return NULL;
+                break;
+        }
     }
     
     /**
      * 
-     * @param arrray $data
+     * @param array $data
      * @param array $getData
      * @return string
      */
@@ -219,7 +265,7 @@ class mSearch extends Model
         
         $atom = xmlAddChild($channel, 'atom10:link');
         xmlSetAttribute($atom, 'xmlns:atom10', 'http://www.w3.org/2005/Atom');
-        xmlSetAttribute($atom, 'href', searchLink($getData, TRUE, FALSE, TRUE));
+        xmlSetAttribute($atom, 'href', searchLink($getData, TRUE, NULL, TRUE));
         xmlSetAttribute($atom, 'rel', 'self');
         xmlSetAttribute($atom, 'type', 'application/rss+xml');
         
