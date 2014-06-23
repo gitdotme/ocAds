@@ -104,6 +104,8 @@ if ( ! function_exists('http_response_code'))
     {
         if ($code !== NULL)
         {
+            $text = '';
+            
             switch ($code)
             {
                 case 100: $text = 'Continue'; break;
@@ -223,9 +225,9 @@ if ( ! function_exists('filterText'))
     /**
      * 
      * @param string $text
-     * @param type $doHtmlSc Default is TRUE
-     * @param type $doNl2Br Default is FALSE
-     * @param type $ucWords Default is FALSE
+     * @param boolean $doHtmlSc Default is TRUE
+     * @param boolean $doNl2Br Default is FALSE
+     * @param boolean $ucWords Default is FALSE
      * @return string|null
      */
     function filterText($text = NULL, $doHtmlSc = TRUE, $doNl2Br = FALSE, $ucWords = FALSE)

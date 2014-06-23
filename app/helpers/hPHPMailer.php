@@ -10,8 +10,8 @@ if ( !function_exists('mailSend'))
      * @param array $from
      * @param array $to
      * @param array $replyTo Default is NULL
-     * @param type $subject
-     * @param type $body
+     * @param string $subject
+     * @param string $body
      * @return boolean
      */
     function mailSend($from, $to, $replyTo = NULL, $subject = NULL, $body = NULL)

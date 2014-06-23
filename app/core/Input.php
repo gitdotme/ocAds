@@ -105,6 +105,8 @@ class Input
      */
     private static function _getVar($type, $index = NULL)
     {
+        $var = NULL;
+        
         if ($type == 'get')
         {
             $var = self::$_get; 

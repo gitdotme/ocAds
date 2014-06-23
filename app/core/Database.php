@@ -552,7 +552,7 @@ class DB
         
         if ($key)
         {
-            foreach ($key as $key => $val)
+            foreach ($key as $item => $val)
             {
                 if ($val)
                 {
@@ -560,7 +560,7 @@ class DB
                     
                     $val = str_replace(' ', '%', $val);
                     
-                    self::$_where .= ($first ? '' : ' '.$cond_op.' ')."`".$key."` ".($not_like ? ' NOT' : '')."LIKE '%".($escape ? self::_escape($val) : $val)."%'";
+                    self::$_where .= ($first ? '' : ' '.$cond_op.' ')."`".$item."` ".($not_like ? ' NOT' : '')."LIKE '%".($escape ? self::_escape($val) : $val)."%'";
                 }
             }
         }
@@ -583,7 +583,7 @@ class DB
         
         if ($key)
         {
-            foreach ($key as $key => $val)
+            foreach ($key as $item => $val)
             {
                 if ($val)
                 {
@@ -595,7 +595,7 @@ class DB
                     }
                     else
                     {
-                        self::$_order .= ($first ? '' : ', ')."`".$key."` ".strtoupper($order);
+                        self::$_order .= ($first ? '' : ', ')."`".$item."` ".strtoupper($order);
                     }
                 }
             }
@@ -743,6 +743,8 @@ class DB
         {
             return NULL;
         }
+
+        $fetch = NULL;
         
         if ($type == 'object')
         {
@@ -783,7 +785,7 @@ class DB
             
             foreach ($value as $key => $val)
             {
-                $first = $update ? FALSE : TRUE;
+                $first = $set ? FALSE : TRUE;
                 
                 if ($val !== NULL)
                 {

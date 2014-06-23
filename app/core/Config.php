@@ -39,7 +39,7 @@ class Config
             {
                 require $path;
                 
-                if (is_array($config) AND ! empty($config))
+                if (isset($config) AND is_array($config) AND ! empty($config))
                 {
                     foreach ($config as $key => $value)
                     {

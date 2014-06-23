@@ -63,5 +63,7 @@ class View
             // show error page
             showError($e->getMessage(), 'Error: View', 500);
         }
+        
+        return NULL;
     }
 }

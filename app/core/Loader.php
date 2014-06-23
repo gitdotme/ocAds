@@ -13,7 +13,7 @@ class Loader
     {
         require APP_DIR.'/config/loader.php';
         
-        if (is_array($loader) AND ! empty($loader))
+        if (isset($loader) AND is_array($loader) AND ! empty($loader))
         {
             foreach ($loader as $key => $value)
             {
