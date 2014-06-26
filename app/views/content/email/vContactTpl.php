@@ -1,11 +1,11 @@
 Name: <?php echo $name; ?>
 
 
-Email: <?php echo $name; ?>
+Email: <?php echo $email; ?>
 
 
 --------------
 Message:
-<?php echo $name; ?>
+<?php echo $message; ?>
 
 --------------
