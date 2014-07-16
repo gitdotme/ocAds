@@ -6,13 +6,21 @@
 class View
 {
     /**
+     * @static
+     * @access private
+     * @var bool
+     */
+    private static $_zlib = FALSE;
+    
+    /**
      * 
      * @access private
      * @return void
      */
     private function __construct()
     {
-        // does not create instance
+        // set zlib output compression
+        self::$_zlib = @ini_get('zlib.output_compression');
     }
     
     /**
@@ -35,9 +43,22 @@ class View
                 {
                     extract($data);
                 }
-                //print_r($data);die;
-                ob_start();
-                ob_clean();
+                
+                if (Config::get('compressOutput') AND self::$_zlib == FALSE)
+                {
+                    if (extension_loaded('zlib'))
+                    {
+                        if (isset($_SERVER['HTTP_ACCEPT_ENCODING']) AND strpos($_SERVER['HTTP_ACCEPT_ENCODING'], 'gzip') !== FALSE)
+                        {
+                            ob_start('ob_gzhandler');
+                        }
+                    }
+                }
+                else
+                {
+                    ob_start();
+                    ob_clean();
+                }
                 
                 require $view_path;
                 

@@ -20,6 +20,9 @@ $config['contactEmail'] = '';
 // default controller
 $config['defaultController'] = 'home';
 
+// compress output
+$config['compressOutput'] = FALSE;
+
 /**
  * Log Threshold
  * 
