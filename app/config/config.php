@@ -23,6 +23,9 @@ $config['defaultController'] = 'home';
 // compress output
 $config['compressOutput'] = FALSE;
 
+// ad position between search results
+$config['searchAdPos'] = 3;
+
 /**
  * Log Threshold
  * 

@@ -94,7 +94,9 @@ class Layout
         $data['headingLayout'] = self::$_heading ? self::$_heading : Config::get('siteHeading', 'seo');
         $data['charsetLayout'] = self::$_charset ? self::$_charset : Config::get('siteCharset', 'seo');
         $data['robotsLayout'] = self::$_robots ? self::$_robots : Config::get('siteRobots', 'seo');
-        $data['adLayout'] = View::render('ad/vAd160x600', $data, TRUE);
+        $data['ad336x280Layout'] = View::render('ad/vAd336x280', $data, TRUE);
+        $data['ad336x280AltLayout'] = View::render('ad/vAd336x280Alt', $data, TRUE);
+        $data['ad160x600Layout'] = View::render('ad/vAd160x600', $data, TRUE);
         $data['contentLayout'] = View::render($view, $data, TRUE);
         
         // render css

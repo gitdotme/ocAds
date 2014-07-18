@@ -580,6 +580,12 @@ a:hover
     clear: both;
 }
 
+#searchResults .otherLinks
+{
+    margin: 0;
+    margin-bottom: 5px;
+}
+
 #searchResults .resultHead
 {
     overflow: hidden;

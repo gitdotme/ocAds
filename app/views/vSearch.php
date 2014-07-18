@@ -141,10 +141,24 @@
                 <!-- search filter end //-->
                 <!-- search results begin //-->
                 <section id="searchResults">
+                    <div class="otherLinks">
+                        <?php echo $ad336x280Layout; ?>
+
+                    </div>
+
                     <?php if ($items): ?>
                     <!-- search results begin //-->
                     <ul>
+                        <?php $row = 1; ?>
                         <?php foreach ($items as $item): ?>
+                            
+                        <?php if ($row == Config::get('searchAdPos')): ?>
+                        <div class="otherLinks">
+                            <?php echo $ad336x280AltLayout; ?>
+
+                        </div>
+                        <?php endif; ?>
+                            
                         <!-- search results loop begin //-->
                         <li>
                             <div class="resultHead">
@@ -175,6 +189,7 @@
                             </div>
                         </li>
                         <!-- search results loop end //-->
+                        <?php $row += 1; ?>
                         <?php endforeach; ?>
                     </ul>
                     <!-- search results end //-->
@@ -235,7 +250,7 @@
                     <!-- social links end //-->
                     <!-- other links begin //-->
                     <div class="otherLinks">
-                        <?php echo $adLayout; ?>
+                        <?php echo $ad160x600Layout; ?>
                         
                     </div>
                     <!-- other links end //-->
