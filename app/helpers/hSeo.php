@@ -134,7 +134,7 @@ if ( ! function_exists('searchLink'))
 
         $str = makeParams($params, $page, $extend);
 
-        return baseURL(Config::get($link, 'route').($str ? '?'.$str : ''));
+        return baseURL(Route::get_config('searchLink', 'route').($str ? '?'.$str : ''));
     }
 }
 
@@ -207,49 +207,5 @@ if ( ! function_exists('getSeo'))
         $str = trim($str, ' -,');
 
         return $str;
-
-        /*preg_match_all('/\[([\w\W]+)\]/Uis', $str, $parts);
-        if ($parts[1])
-        {
-            foreach ($parts[1] as $part)
-            {
-                preg_match_all('/{([\w\W\s]+)}/Uis', $part, $params);
-                if ($params[1])
-                {
-                    $tmp_str = $str;
-                    foreach ($params[1] as $param)
-                    {
-                        if (strpos($param, ':') !== FALSE)
-                        {
-                            $param_else = substr(strstr($param, ':'), 1);
-                            $param = strstr($param, ':', TRUE);
-                        }
-                        
-                        if ($vars[$param] !== FALSE AND $vars[$param] !== "")
-                        {
-                            $str = str_replace('{'.$param.'}', $vars[$param], $str);
-                        }
-                        else
-                        {
-                            if (isset($param_else))
-                            {
-                                $str = str_replace('{'.$param.':'.$param_else.'}', $param_else, $str);
-                            }
-                            else
-                            {
-                                $str = str_replace('['.$part.']', '', $tmp_str);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        $str = preg_replace('/([\s]+)/', ' ', $str);
-        $str = str_replace(array('[', ']'), '', $str);
-        $str = str_replace(' - - ', ' - ', $str);
-        $str = trim($str, ' -,');
-
-        return $str;*/
     }
 }

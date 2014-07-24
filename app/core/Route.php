@@ -55,13 +55,17 @@ class Route
         
         require APP_DIR.'/config/route.php';
         
-        if (is_array($route) AND ! empty($route))
+        if (isset($route) AND is_array($route) AND ! empty($route))
         {
             foreach ($route as $key => $value)
             {
-                if ( ! self::$_controller AND (isset($value['route']) AND isset($value['method'])))
+                if (isset($value['route']) AND isset($value['method']))
                 {
-                    self::_check($value['route'], $value['method']);
+                    if ( ! self::$_controller )
+                    {
+                        self::_check($value['route'], $value['method']);
+                    }
+                    
                     self::_set_config($key, $value['route'], $value['method']);
                 }
             }
