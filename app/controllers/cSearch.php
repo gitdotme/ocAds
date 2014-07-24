@@ -22,7 +22,6 @@ class cSearch extends Controller
         Layout::js('assets/js/jquery.min.js');
         Layout::js('assets/js/jquery.placeholder.js');
         Layout::js('assets/js/jquery.slider.min.js');
-        Layout::js('assets/js/jquery.lazyload.min.js');
         Layout::js('assets/js/common.js');
     }
     

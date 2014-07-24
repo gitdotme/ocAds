@@ -141,11 +141,6 @@ $(document).ready(function(e)
         $('a[rel~=nofollow]').attr('target', '_blank');
         $('a[rel~=external]').attr('target', '_blank');
     });
-
-    $(function()
-    {
-        $('img.lazy').lazyload();
-    });
     
     $('img').each(function()
     {

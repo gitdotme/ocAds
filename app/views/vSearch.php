@@ -177,7 +177,7 @@
                             <div class="resultContain">
                                 <?php if ($item->picture): ?>
                                 <div class="resultPhoto">
-                                    <p><a href="<?php echo itemLink($item->hash); ?>" title="<?php echo filterText($item->title); ?>" rel="nofollow"><img class="lazy" data-original="<?php echo filterText($item->picture); ?>" alt="<?php echo filterText($item->title); ?>"></a></p>
+                                    <p><a href="<?php echo itemLink($item->hash); ?>" title="<?php echo filterText($item->title); ?>" rel="nofollow"><img src="<?php echo filterText($item->picture); ?>" alt="<?php echo filterText($item->title); ?>"></a></p>
                                 </div>
                                 <?php endif; ?>
                                 <div class="resultContent">
