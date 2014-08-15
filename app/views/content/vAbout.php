@@ -19,21 +19,12 @@
                                 <p><span>Which?</span></p>
                                 <p>
                                     <select name="type" class="searchType">
-                                        <?php if (isset($params)): ?>
-                                        <option value="car"<?php echo selectedVal('car', $params['type']); ?>>Cars</option>
-                                        <option value="boat"<?php echo selectedVal('boat', $params['type']); ?>>Boats</option>
-                                        <option value="moto"<?php echo selectedVal('moto', $params['type']); ?>>Motorcycles</option>
-                                        <option value="atv"<?php echo selectedVal('atv', $params['type']); ?>>ATVs</option>
-                                        <option value="rv"<?php echo selectedVal('rv', $params['type']); ?>>RVs</option>
-                                        <option value="trailer"<?php echo selectedVal('trailer', $params['type']); ?>>Trailers</option>
-                                        <?php else: ?>
                                         <option value="car">Cars</option>
                                         <option value="boat">Boat and Yachts</option>
                                         <option value="moto">Motorcycles</option>
                                         <option value="atv">ATVs</option>
                                         <option value="rv">RVs</option>
                                         <option value="trailer">Trailers</option>
-                                        <?php endif; ?>
                                     </select>
                                 </p>
                             </li>
@@ -43,15 +34,10 @@
                                 <p><span>Where?</span></p>
                                 <p>
                                     <select name="country" class="searchCountry">
-                                        <?php if (isset($params)): ?>
-                                        <option value="us"<?php echo selectedVal('us', $params['country']); ?>>United States</option>
-                                        <option value="ca"<?php echo selectedVal('ca', $params['country']); ?>>Canada</option>
-                                        <option value="uk"<?php echo selectedVal('uk', $params['country']); ?>>United Kingdom</option>
-                                        <?php else: ?>
                                         <option value="us">United States</option>
                                         <option value="ca">Canada</option>
                                         <option value="uk">United Kingdom</option>
-                                        <?php endif; ?>
+                                        <option value="au">Australia</option>
                                     </select>
                                 </p>
                             </li>

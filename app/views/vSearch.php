@@ -44,10 +44,12 @@
                                         <option value="us"<?php echo selectedVal('us', $params['country']); ?>>United States</option>
                                         <option value="ca"<?php echo selectedVal('ca', $params['country']); ?>>Canada</option>
                                         <option value="uk"<?php echo selectedVal('uk', $params['country']); ?>>United Kingdom</option>
+                                        <option value="au"<?php echo selectedVal('au', $params['country']); ?>>Australia</option>
                                         <?php else: ?>
                                         <option value="us">United States</option>
                                         <option value="ca">Canada</option>
                                         <option value="uk">United Kingdom</option>
+                                        <option value="au">Australia</option>
                                         <?php endif; ?>
                                     </select>
                                 </p>

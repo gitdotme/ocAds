@@ -37,6 +37,7 @@
                                         <option value="us">United States</option>
                                         <option value="ca">Canada</option>
                                         <option value="uk">United Kingdom</option>
+                                        <option value="au">Australia</option>
                                     </select>
                                 </p>
                             </li>
